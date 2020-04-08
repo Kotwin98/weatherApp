@@ -1,10 +1,15 @@
 import React from 'react';
 
-const Form = () => {
+const Form = (props) => {
     return (
-        <form>
-            <input type="text" />
-            <button>Search for a city</button>
+        <form onSubmit={props.submit}>
+            <input 
+                type="text"
+                value={props.value}
+                onChange={props.change}
+                placeholder="Write city name"
+            />
+            <button>Search</button>
         </form>
     );
 };
