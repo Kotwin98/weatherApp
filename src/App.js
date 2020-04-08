@@ -17,6 +17,12 @@ class App extends Component {
     err: ""
   };
 
+  handleInputChange = e => {
+    this.setState({
+      value: e.target.value
+    });
+  };
+
   handleCitySubmit = e => {
     e.preventDefault();
     const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=eb83d66ce254c055b493127ed3693ace&units=metric`;
@@ -38,6 +44,7 @@ class App extends Component {
       <div className="App">
         <Form 
           value={this.state.value}
+          change={this.handleInputChange}
           submit={this.handleCitySubmit}
         />
         <Result />
