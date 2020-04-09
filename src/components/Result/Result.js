@@ -23,10 +23,10 @@ const Result = (props) => {
             <div>
                 <div>
                     <p>
-                        Date: <strong>{date}</strong>
+                        <strong>{date}</strong>
                     </p>
                     <p>
-                        City: <strong>{city}</strong>
+                        <strong>{city}</strong>
                     </p>
                 </div>
                 <div>
@@ -35,7 +35,7 @@ const Result = (props) => {
                         alt="weather img"
                     />
                     <span>
-                        Temperature: <strong>{temp}&deg;C</strong>
+                        <strong>{temp}&deg;C</strong>
                     </span>
                     <span>
                         Sunrise time: <strong>{sunriseTime}</strong>
