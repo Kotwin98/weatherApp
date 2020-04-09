@@ -1,0 +1,17 @@
+.App {
+    text-align: center;
+    min-width: 550px;
+    min-height: 150px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 767px) {
+    .App {
+      min-width: 100vw;
+    }
+    h1 {
+      color: #56ab2f;
+    }
+  }
