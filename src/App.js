@@ -28,37 +28,39 @@ class App extends Component {
 
   handleCitySubmit = e => {
     e.preventDefault();
-    const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=${APIkey}&units=metric`;
-
-    fetch(API)
-    .then(response => {
-      if (response.ok) {
-        return response;
-      }
-      throw Error('Something went wrong');
-    })
-    .then(response => response.json())
-    .then(result => {
-      const time = new Date().toLocaleString();
-
-      this.setState(prevState => ({
-        date: time,
-        city: prevState.value,
-        icon: result.weather[0].icon,
-        sunrise: result.sys.sunrise,
-        sunset: result.sys.sunset,
-        temp: Math.floor(result.main.temp),
-        pressure: result.main.pressure,
-        wind: result.wind.speed,
-        err: false
-      }));
-    })
-    .catch(err => {
-      this.setState(prevState => ({
-        err: true,
-        city: prevState.value
-      }));
-    });
+    if (this.state.value !== "") {
+      const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=${APIkey}&units=metric`;
+  
+      fetch(API)
+      .then(response => {
+        if (response.ok) {
+          return response;
+        }
+        throw Error('Something went wrong');
+      })
+      .then(response => response.json())
+      .then(result => {
+        const time = new Date().toLocaleString();
+  
+        this.setState(prevState => ({
+          date: time,
+          city: prevState.value,
+          icon: result.weather[0].icon,
+          sunrise: result.sys.sunrise,
+          sunset: result.sys.sunset,
+          temp: Math.floor(result.main.temp),
+          pressure: result.main.pressure,
+          wind: result.wind.speed,
+          err: false
+        }));
+      })
+      .catch(err => {
+        this.setState(prevState => ({
+          err: true,
+          city: prevState.value
+        }));
+      });
+    }
   };
 
   render() {
