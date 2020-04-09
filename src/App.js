@@ -46,7 +46,7 @@ class App extends Component {
         sunset: result.sys.sunset,
         temp: result.main.temp,
         pressure: result.main.pressure,
-        wind: result.wind.pressure,
+        wind: result.wind.speed,
         err: false
       }));
     })
