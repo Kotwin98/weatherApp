@@ -47,7 +47,7 @@ class App extends Component {
         icon: result.weather[0].icon,
         sunrise: result.sys.sunrise,
         sunset: result.sys.sunset,
-        temp: result.main.temp,
+        temp: Math.floor(result.main.temp),
         pressure: result.main.pressure,
         wind: result.wind.speed,
         err: false
