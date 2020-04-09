@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Result.scss';
+
 const Result = (props) => {
     const {
         date,
@@ -20,21 +22,21 @@ const Result = (props) => {
         const sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
 
         content = (
-            <div>
-                <div>
+            <div className="content">
+                <div className="content-info">
                     <p>
                         <strong>{date}</strong>
                     </p>
-                    <p>
+                    <p className="content-city">
                         <strong>{city}</strong>
                     </p>
                 </div>
-                <div>
+                <div className="contnet-weather">
                     <img
                         src={`http://openweathermap.org/img/w/${icon}.png`}
                         alt="weather img"
                     />
-                    <span>
+                    <span className="content-temp">
                         <strong>{temp}&deg;C</strong>
                     </span>
                     <span>
