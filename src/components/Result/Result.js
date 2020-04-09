@@ -55,9 +55,7 @@ const Result = (props) => {
     }
 
     return (
-        <div>
-            {err ? `Sorry, we do not have ${city} in the database` : content}
-        </div>
+        <>{err ? `Sorry, we do not have ${city} in the database` : content}</>
     );
 };
 
