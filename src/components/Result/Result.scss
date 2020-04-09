@@ -1,0 +1,33 @@
+.content {
+    margin: 20px;
+    &-info {
+      margin: 20px auto;
+      p {
+        margin: 0;
+      }
+    }
+    &-city {
+      font-size: 35px;
+    }
+    &-weather {
+      display: flex;
+      flex-direction: column;
+      img {
+        margin: 0 auto;
+      }
+    }
+    &-temp {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .content {
+      margin: 20px auto;
+      padding-bottom: 15px;
+      max-width: 300px;
+      border: 2px solid #56ab2f;
+      border-radius: 8px;
+    }
+  }
