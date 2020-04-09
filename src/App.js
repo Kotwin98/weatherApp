@@ -11,6 +11,7 @@ class App extends Component {
     value: "",
     date: "",
     city: "",
+    icon: "",
     sunrise: "",
     sunset: "",
     temp: "",
@@ -39,9 +40,11 @@ class App extends Component {
     .then(response => response.json())
     .then(result => {
       const time = new Date().toLocaleString();
+
       this.setState(prevState => ({
         date: time,
         city: prevState.value,
+        icon: result.weather[0].icon,
         sunrise: result.sys.sunrise,
         sunset: result.sys.sunset,
         temp: result.main.temp,
