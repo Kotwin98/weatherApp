@@ -33,7 +33,7 @@ const Result = (props) => {
                 </div>
                 <div className="content-weather">
                     <img
-                        src={`http://openweathermap.org/img/w/${icon}.png`}
+                        src={`https://openweathermap.org/img/w/${icon}.png`}
                         alt="weather img"
                     />
                     <span className="content-temp">
