@@ -1,3 +1,12 @@
+# Weather app
+### **See [DEMO](https://kotwin98.github.io/weatherApp/)**
+## Tech stack
+- HTML
+- SASS, RWD
+- JavaScript ES6
+- React / JSX
+- Yarn / NPM
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
